@@ -1,11 +1,14 @@
 
-# Ecommerce Website In Django
+## Pizzaria Web
+Trabalho Prático da disciplina de Engenharia de Software do CEFET-MG
 
-In this tutorial I've created an Ecom website for a Pizza Corner using "Django". I have tried to make this project a begginer friendly and also cover all your concepts.
+    Docente:  Eduardo Cunha Campos
+	Discentes: 
+        Antônio José Peixoto Chaves
+        Gustavo de Carvalho Balmant
+        Heitor Vieira Macedo
+        Matheus Thiago de Souza Ferreira
 
-
-
-## Demo
-
-https://pizza-corner.herokuapp.com/
+### Descrição do Projeto
+Projeto de um aplicação Web para realizar a entrega de pedidos para uma pizzaria. 
 
