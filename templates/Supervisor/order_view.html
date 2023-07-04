@@ -15,14 +15,14 @@
                 </div>
                 <div class="order_details">
                     <p>Pizza: {{order.Pizza_name}}</p>
-                    <p>Quantity: {{order.quantity}}</p>
-                    <p>Price: ${{order.Pizza_price}}</p>
+                    <p>Quantidade: {{order.quantity}}</p>
+                    <p>Preço: ${{order.Pizza_price}}</p>
                 </div>
                 <div class="dilivered">
                     <form action="/order/{{order.id}}/" method="POST">
                     {% csrf_token %}
                         <input type="text" value="{{order.id}}" name="o_id" id="o_id" class="hidden-input">
-                        <button type="submit">Delivered</button>
+                        <button type="submit">Entregue</button>
                     </form>
                 </div>
             {% endfor %}
