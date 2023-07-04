@@ -5,16 +5,16 @@
 <section id="orders">
 {% if order %}
     {% if firstobjectofcurrentuser.order_confirmed == False %}
-    <h1>Yor orders</h1>
+    <h1>Seus pedidos</h1>
     <div class="table__orders__container">
         <div class="table__orders">
             <table>
                 <tr>
-                    <th>Pizza Name</th>
-                    <th>Description</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
-                    <th>Cancel</th>
+                    <th>Nome da Pizza</th>
+                    <th>Descrição</th>
+                    <th>Quantidade</th>
+                    <th>Preço</th>
+                    <th>Cancelar</th>
                 </tr>
             {% for pizza in order %}
                 <tr>
@@ -44,8 +44,8 @@
                 </tr>
             {% endfor %}
             <tr>
-                <th>Your</th>
-                <th>Total Price =</th>
+                <th>Seu</th>
+                <th>Preço Total =</th>
                 <th>${{total_price}}</th>
                 <th></th>
                 <th>
@@ -61,19 +61,19 @@
     <div class="confirm_orders">
         <form action="/orderConfirmed/" method="POST">
         {% csrf_token %}
-            <button type="submit">Confirm Your Order <i class="fas fa-check"></i></button>
+            <button type="submit">Confirmar o seu Pedido <i class="fas fa-check"></i></button>
         </form>
     </div>
-    <h4>Please Pay on delivery !</h4>
+    <h4>Por favor, pague na entrega!</h4>
     {% else %}
-        <h1 class="confirmed_bill">Your Oeder Has Been confirmed Successfully <i class="fas fa-check"></i></h1>
+        <h1 class="confirmed_bill">Seu Pedido foi Confirmado com Sucesso <i class="fas fa-check"></i></h1>
         <div class="bill_container">
             <div class="bill_box">
                 <table>
                     <tr>
-                        <th>Pizza Name</th>
-                        <th>Pizza Quantity</th>
-                        <th>Pizza Price</th>
+                        <th>Nome da Pizza</th>
+                        <th>Quantidade da Pizza</th>
+                        <th>Preço da Pizza</th>
                     </tr>
                     {% for pizza in order %}
                     <tr>
@@ -84,7 +84,7 @@
                     {% endfor %}
                     <tr>
                         <td></td>
-                        <td>Your Total Price =</td>
+                        <td>Preço Total =</td>
                         <td>${{total_price}}</td>
                     </tr>
                 </table>
@@ -92,11 +92,11 @@
         </div>
         <form action="/deleteAllOrder/" method="POST">
         {% csrf_token %}
-            <button class="cancel_all_order" type="submit"><i class="fas fa-times"></i> Cancel your order !</button>
+            <button class="cancel_all_order" type="submit"><i class="fas fa-times"></i> Cancelar o Seu Pedido!</button>
         </form>
     {% endif %}
 {% else %}
-<h4>No Orders Yet ! Plesae Make At Least One <a href="/menu/">Order</a></h4>
+<h4>Ainda não foi feito nenhum pedido! Por favor, faça ao menos um. <a href="/menu/">Order</a></h4>
 {% endif %}
 </section>
 {% endblock body %}
