@@ -22,22 +22,22 @@
             </div>
             <div class="address">
                 <div>
-                    <h4>(Address)</h4>
+                    <h4>(Endereço)</h4>
                     <p>{{address_display}}  <i class="fas fa-edit address_edit"></i></p>
                 </div>
             </div>
         </div>
     </div>
-{% comment %} recent orders with time {% endcomment %}
+{% comment %} Pedidos recentes com horário {% endcomment %}
 <!-- Image Uplaod Form -->
 <div class="upload_image_form">
     <form action="/profile/" method="POST" class="image_form" enctype="multipart/form-data">
     {% csrf_token %}
         <div class="cross"><i class="fas fa-times closeImageForm"></i></div>
        <div class="image_btns">
-             <h3>Upload Your Profile Image !</h3>
+             <h3>Envie a sua imagem de perfil!</h3>
             {{form.as_p}}
-            <button type="submit">Upload</button>
+            <button type="submit">Enviar</button>
        </div>
     </form>
 </div>
@@ -47,10 +47,10 @@
     <form action="/address/" method="POST">
     {% csrf_token %}
         <div class="cross2"><i class="fas fa-times closeAddressForm"></i></div>
-        <h1>Upload Your Address !</h1>
+        <h1>Envie seu endereço!</h1>
         <textarea name="address_area" id="address_area" cols="50" rows="3"></textarea>
         <div class="btn__address">
-            <button type="submit">Upload</button>
+            <button type="submit">Enviar</button>
         </div>
     </form>
 </div>
