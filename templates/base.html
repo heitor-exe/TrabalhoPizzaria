@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static './css/index.css' %}">
 
-    <title>{% block title %}{% endblock title %} - Pizza Corner</title>
+    <title>{% block title %}{% endblock title %} - Canto da Pizza</title>
     
 </head>
 <body>
@@ -33,12 +33,12 @@
             </div>
             <nav id="navbar">
                 <ul>
-                    <li><a href="/" class="nav__link {% block active1 %}{% endblock active1 %}">home</a></li>
+                    <li><a href="/" class="nav__link {% block active1 %}{% endblock active1 %}">página inicial</a></li>
                     <li><a href="/menu/" class="nav__link {% block active2 %}{% endblock active2 %}">menu</a></li>
-                    <li><a href="/">about</a></li>
-                    <li><a href="/contact/" {% block active4 %}{% endblock active4 %}>contact</a></li>
+                    <li><a href="/">sobre</a></li>
+                    <li><a href="/contact/" {% block active4 %}{% endblock active4 %}>contato</a></li>
                     {% if user.is_authenticated %}
-                        <li><a href="/profile/">Profile</a></li>
+                        <li><a href="/profile/">Perfil</a></li>
                         {% comment %} <form action="/accounts/logout/" method="POST">
                         {% csrf_token %}
                             <button type="submit">Logout</button>
@@ -47,7 +47,7 @@
                         <li><a href="/log_in/">Login</a></li>
                     {% endif %}
 
-                    <li><a href="/orders/" class="order__link nav__link {% block active3 %}{% endblock active3 %}">Orders 
+                    <li><a href="/orders/" class="order__link nav__link {% block active3 %}{% endblock active3 %}">Pedidos 
                         {% if totalOrders %}
                             <span class="order__num">
                                 {{totalOrders}}
