@@ -11,7 +11,7 @@
                 <form action="/contactlist/{{contact.id}}/" method="POST" class="delete__contact">
                 {% csrf_token %}
                     <input type="text" value="{{contact.id}}" name="c_id" id="c_id" class="hidden-input">
-                    <button type="submit">Delete</button>
+                    <button type="submit">Excluir</button>
                 </form>
             </div>
         </div>
